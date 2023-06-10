@@ -1,11 +1,12 @@
 import { StatusBar, setStatusBarBackgroundColor } from "expo-status-bar";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import {
     Text,
     View,
     SafeAreaView,
     Image,
     TextInput,
+    ActivityIndicator,
     TouchableOpacity,
     ImageBackground,
     ScrollView,
@@ -15,12 +16,13 @@ import {
 import { theme } from '../theme'
 import { Ionicons } from '@expo/vector-icons';
 import { Entypo, Feather } from '@expo/vector-icons';
-
 import { weatherImages } from "../constants";
 
-import { API_KEY } from '@env';
+import { getData, storeData } from '../utils/asyncStorage';
 import {debounce} from 'lodash';
+
 import { fetchLocation, fetchWeatherForecast } from "../api/weather";
+
 
 
 //Greeting
@@ -37,20 +39,25 @@ if (currentHour < 12) {
 export default function HomeScreen() {
     const [showSearch, toggleSearch] = useState(false);
     const [locations, setLocations] = useState([])
-    const [weather, setWeather] =useState({})
+    const [weather, setWeather] = useState({})
+    const [loading, setLoading] = useState(true)
     
 
     const getLocations = (loc) => {
         console.log("You entered: ", loc);
         setLocations([]);
+        setLoading(true);
         fetchWeatherForecast({
             cityName: loc.name,
             days: "7"
         }).then(data => {
             setWeather(data)
+            setLoading(false)
+            storeData("city", loc.name)
             console.log("got forecast data: ", data)
         })
         toggleSearch(false)
+        
     }
 
     const handleSearch = value => {
@@ -58,12 +65,33 @@ export default function HomeScreen() {
             fetchLocation({cityName: value}).then(data => {
                 setLocations(data)
             })
-        
         }
     }
-    const handleTextDebounce = useCallback(debounce(handleSearch, 1200), [])
+
+    useEffect(() => {
+        initialWeatherData();
+    },[])
+
+// Data for fresh open
+    const initialWeatherData = async () => {
+        let savedCity = await getData("city")
+        let cityName = "austin"
+        if(savedCity) cityName = savedCity
+        fetchWeatherForecast ({
+            cityName,
+            days: "7"
+        }).then(data => {
+            setWeather(data)
+            setLoading(false)
+        })
+    }
+
+
+// limiting api calls
+    const handleTextDebounce = useCallback(debounce(handleSearch, 1200), []) 
 
     const {current, location} = weather
+    // console.log(weather.forecast.forecastday[0].day?.maxtemp_f)
 
     return (
 
@@ -74,163 +102,171 @@ export default function HomeScreen() {
                 className="absolute h-full w-full"
             />
             
-            <SafeAreaView className="flex flex-1">
-                
-                    {/* SECTION: Search */}
-
-                    <View style={{ height: 55 }} className="my-10 mx-4 relative z-50">
-                        <View className="flex-row justify-end items-center rounded-full"
-                            style={{ backgroundColor: showSearch ? theme.bgWhite(0.9) : "transparent" }}>
-
-                            {
-                                showSearch ? (
-                                    <TextInput
-                                    onChangeText={handleTextDebounce}
-                                        placeholder="Search City"
-                                        placeholderTextColor={"lightgray"}
-                                        className="pl-6 h-10 flex-1 text-base text-black"
-                                    />
-
-                                ) : null
-                            }
-
-                            <TouchableOpacity
-                                onPress={() => toggleSearch(!showSearch)}
-                                style={{ backgroundColor: theme.bgBlack(0.2) }}
-                                className="rounded-full p-3 m-1"
-                            >
-
-                                <Entypo name="magnifying-glass" size={24} color="black" />
-                            </TouchableOpacity>
-                        </View>
-                        {
-                            locations.length > 0 && showSearch ? (
-                                <View className="absolute w-full bg-gray-200 top-16 rounded-2xl">
-                                    {
-                                        locations.map((loc, index) => {
-                                            let showBorder = index + 1 != locations.length;
-                                            let borderStyle = showBorder ? "border-b-2 border-b-gray-300" : ""
-                                            return (
-                                                <TouchableOpacity
-                                                    onPress={() => getLocations(loc)}
-                                                    key={index}
-                                                    className={"flex-row items-center border-0 p-3 px- mb-1 " + borderStyle}
-                                                >
-                                                    <Feather name="map-pin" size={15} color="gray" />
-                                                    <Text className="ml-2">{loc?.name}, {loc?.region}</Text>
-                                                </TouchableOpacity>
-                                            )
-                                        })
-                                    }
-                                </View>
-                            ) : null
-                        }
-                    </View>
-                    {/* SECTION: Forecast */}
-
-                    <View className="flex-col ">
-                    <Text className="text-black text-center text-5xl  mb-3">{Math.round(current?.temp_f)}°</Text>
-                        <Text className="text-black text-center text-3xl font-bold">
-                            {location?.name}
-                            <Text className="text-lg font-semibold text-gray-600">
-                                {" " + location?.region}
-                            </Text>
-
-                        </Text>
-                        <Text className="text-black text-center text-sm font-semibold">{current?.condition?.text}</Text>
-                        {/* <Text className="text-black text-center text-3xl font-semibold">{current?.temp_f}°</Text> */}
-                    </View>
-
-                    <View className="flex-row justify-center mt-1">
-                        {/* <Image source={{uri: 'https://'+current?.condition?.icon}}
-                            className="w-20 h-20"
-                        /> */}
-                        
-                         <Image 
-                          source={weatherImages[current?.condition?.text || 'other']} 
-                        //  source={require('../assets/images/partlycloudy.png')}
-                            className="w-20 h-20"
-                        />
-                        <View className="my-3 ml-3">
-                            <Text className="font-medium text-base">H:600°</Text>
-                            <Text className="font-medium text-base">L: 33°</Text>
-                        </View>
-                    </View>
-                    {/* Other Stats                 */}
-                    <View className="flex-row justify-between mb-3 mx-11 mt-5 ">
-                        <View className="flex-row space-x-2 items-center">
-                            <View className="flex-col items-center">
-                                <Feather name="wind" size={20} color="gray" className="h-6 w-6" />
-                                <Text className="text-black font-semibold text-sm">Wind</Text>
-                                <Text className="text-black font-semibold text-base">
-                                    {Math.round(current?.wind_mph)}
-                                    <Text className="font-light text-sm">mph</Text>
-                                </Text>
-                            </View>
-                        </View>
-                        <View className="flex-row space-x-2 items-center">
-                            <View className="flex-col items-center">
-                                <Ionicons name="rainy-outline" size={20} color="gray" />
-                                <Text className="text-black font-semibold text-sm">Rain</Text>
-                                <Text className="text-black font-semibold text-base">
-                                    14
-                                    <Text className="font-light text-sm">%</Text>
-                                </Text>
-                            </View>
-                        </View>
-                        <View className="flex-row space-x-2 items-center">
-                            <View className="flex-col items-center">
-                                <Ionicons name="md-water-outline" size={20} color="gray" />
-                                <Text className="text-black font-semibold text-sm">Humidity</Text>
-                                <Text className="text-black font-semibold text-base">
-                                {Math.round(current?.humidity)}
-                                    <Text className="font-light text-sm">%</Text>
-                                </Text>
-                            </View>
-                        </View>
-                    </View>
-
-  {/* Forecasted weather */}
-  <ScrollView contentContainerStyle={{ marginTop: 1 }} >
-
-                    <View className="ml-5 mt-5 mb-2 space-y-3" >
-
-                        <View className="flex-row items-center mx-5 space-x-2">
-                            <Ionicons name="ios-calendar-outline" size={20} color="gray" />
-                            <Text className="text-sm text-gray-600">Daily Forecast</Text>
-                        </View>
             {
-                weather?.forecast?.forecastday?.map((item, index) => {
-                    let date = new Date(item.date)
-                    let options = {weekday: 'short'}
-                    let dayName = date.toLocaleDateString('en-US', options)
-                    dayName = dayName.split(',')[0]
-                    return (
-                        <View 
-                        key={index}
-                        style={styles.forecastBox}>
-                        <Text className="text-black font-semibold text-sm">{dayName}</Text>
-    
-                            <Image 
-                            // source={{uri: 'https:'+current?.condition?.icon}} 
-                            source={weatherImages[item?.day?.condition?.text]}
-                            style={{ width: 30, height: 30 }}
-                            />
-                                <Text> {item?.day?.condition?.text}</Text>
-                                <Text >{Math.round(item?.day?.maxtemp_f)}° L: {Math.round(item?.day?.mintemp_f)}° </Text>
-                    </View>
-                    
-                    )
-                })
-            }
-               
+                loading ? (
+            <View className = "flex-1 justify-center items-center">
+                <ActivityIndicator size={100} />
+            </View>
+                   
+                ) : (
+    <SafeAreaView className="flex flex-1">
+        
+            {/* SECTION: Search */}
 
+            <View style={{ height: 55 }} className="my-10 mx-4 relative z-50">
+                <View className="flex-row justify-end items-center rounded-full"
+                    style={{ backgroundColor: showSearch ? theme.bgWhite(0.9) : "transparent" }}>
+
+                    {
+                        showSearch ? (
+                            <TextInput
+                            onChangeText={handleTextDebounce}
+                                placeholder="Search City"
+                                placeholderTextColor={"lightgray"}
+                                className="pl-6 h-10 flex-1 text-base text-black"
+                            />
+
+                        ) : null
+                    }
+
+                    <TouchableOpacity
+                        onPress={() => toggleSearch(!showSearch)}
+                        style={{ backgroundColor: theme.bgBlack(0.2) }}
+                        className="rounded-full p-3 m-1"
+                    >
+
+                        <Entypo name="magnifying-glass" size={24} color="black" />
+                    </TouchableOpacity>
                 </View>
-                </ScrollView>
-                    
+                {
+                    locations.length > 0 && showSearch ? (
+                        <View className="absolute w-full bg-gray-200 top-16 rounded-2xl">
+                            {
+                                locations.map((loc, index) => {
+                                    let showBorder = index + 1 != locations.length;
+                                    let borderStyle = showBorder ? "border-b-2 border-b-gray-300" : ""
+                                    return (
+                                        <TouchableOpacity
+                                            onPress={() => getLocations(loc)}
+                                            key={index}
+                                            className={"flex-row items-center border-0 p-3 px- mb-1 " + borderStyle}
+                                        >
+                                            <Feather name="map-pin" size={15} color="gray" />
+                                            <Text className="ml-2">{loc?.name}, {loc?.region}</Text>
+                                        </TouchableOpacity>
+                                    )
+                                })
+                            }
+                        </View>
+                    ) : null
+                }
+            </View>
+            {/* SECTION: Forecast */}
+
+            <View className="flex-col ">
+            <Text className="text-black text-center text-5xl  mb-3">{Math.round(current?.temp_f)}°</Text>
+                <Text className="text-black text-center text-3xl font-bold">
+                    {location?.name}
+                    <Text className="text-lg font-semibold text-gray-600">
+                        {" " + location?.region}
+                    </Text>
+
+                </Text>
+                <Text className="text-black text-center text-sm font-semibold text-gray-600">{current?.condition?.text} and feels like: {Math.round(current?.feelslike_f)}°</Text>
+                {/* <Text className="text-black text-center text-3xl font-semibold">{current?.temp_f}°</Text> */}
+            </View>
+
+            <View className="flex-row justify-center mt-1">
+                {/* <Image source={{uri: 'https://'+current?.condition?.icon}}
+                    className="w-20 h-20"
+                /> */}
                 
-            </SafeAreaView>
+                    <Image 
+                    source={weatherImages[current?.condition?.text || 'other']} 
+                //  source={require('../assets/images/partlycloudy.png')}
+                    className="w-20 h-20"
+                />
+                <View className="my-3 ml-3">
+                    <Text className="font-medium text-base">H: {Math.round(weather?.forecast?.forecastday[0]?.day?.maxtemp_f)}°</Text>
+                    <Text className="font-medium text-base">L: {Math.round(weather?.forecast?.forecastday[0]?.day?.mintemp_f)}°</Text>
+                </View>
+            </View>
+            {/* Other Stats                 */}
+            <View className="flex-row justify-between mb-3 mx-11 mt-5 ">
+                <View className="flex-row space-x-2 items-center">
+                    <View className="flex-col items-center">
+                        <Feather name="wind" size={20} color="gray" className="h-6 w-6" />
+                        <Text className="text-black font-semibold text-sm">Wind</Text>
+                        <Text className="text-black font-semibold text-base">
+                            {Math.round(current?.wind_mph)}
+                            <Text className="font-light text-sm">mph</Text>
+                        </Text>
+                    </View>
+                </View>
+                <View className="flex-row space-x-2 items-center">
+                    <View className="flex-col items-center">
+                        <Ionicons name="rainy-outline" size={20} color="gray" />
+                        <Text className="text-black font-semibold text-sm">Rain</Text>
+                        <Text className="text-black font-semibold text-base">
+                        {Math.round(weather?.forecast?.forecastday[0]?.day?.daily_chance_of_rain)}
+                            <Text className="font-light text-sm">%</Text>
+                        </Text>
+                    </View>
+                </View>
+                <View className="flex-row space-x-2 items-center">
+                    <View className="flex-col items-center">
+                        <Ionicons name="md-water-outline" size={20} color="gray" />
+                        <Text className="text-black font-semibold text-sm">Humidity</Text>
+                        <Text className="text-black font-semibold text-base">
+                        {Math.round(current?.humidity)}
+                            <Text className="font-light text-sm">%</Text>
+                        </Text>
+                    </View>
+                </View>
+            </View>
+
+{/* Forecasted weather */}
+<ScrollView contentContainerStyle={{ marginTop: 1 }} >
+
+            <View className="ml-5 mt-5 mb-2 space-y-3" >
+
+                <View className="flex-row items-center mx-5 space-x-2">
+                    <Ionicons name="ios-calendar-outline" size={20} color="gray" />
+                    <Text className="text-sm text-gray-600">Daily Forecast</Text>
+                </View>
+    {
+        weather?.forecast?.forecastday?.map((item, index) => {
+            let date = new Date(item.date)
+            let options = {weekday: 'short'}
+            let dayName = date.toLocaleDateString('en-US', options)
+            dayName = dayName.split(',')[0]
+            return (
+                <View 
+                key={index}
+                style={styles.forecastBox}>
+                <Text className="text-black font-semibold text-sm">{dayName}</Text>
+
+                    <Image 
+                    // source={{uri: 'https:'+current?.condition?.icon}} 
+                    source={weatherImages[item?.day?.condition?.text]}
+                    style={{ width: 30, height: 30 }}
+                    />
+                        <Text> {item?.day?.condition?.text}</Text>
+                        <Text >{Math.round(item?.day?.maxtemp_f)}° L: {Math.round(item?.day?.mintemp_f)}° </Text>
+            </View>
             
+            )
+        })
+    }
+        
+
+        </View>
+        </ScrollView>
+            
+        
+    </SafeAreaView>                
+                )
+            }
 
         </View>
 
