@@ -18,24 +18,25 @@ In the terminal type:
 
 You can scan the QR code with the Expo app on your mobile device to open the project.
 
-Project Structure
+## Project Structure
 The project structure follows the standard structure of a React Native Expo project. Here are some key directories and files:
 
 - App.js: The entry point of the application.
-- src/: Contains the source code files of the application.
 - assets/: Stores static assets such as images, fonts, etc.
 - components/: Contains reusable components used throughout the application.
 - screens/: Contains the individual screens/pages of the application.
-- Feel free to explore the code and make any necessary modifications to suit your needs.
+- utils/: For storage to local device
+
+Feel free to explore the code and make any necessary modifications to suit your needs.
 
 
-Contributing
+## Contributing
 Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to submit a pull request.
 
-License
+## License
 This project is licensed under the MIT License.
 
-Acknowledgements
+## Acknowledgements
 Expo - A free and open-source platform for building React Native applications.
-Contact
+## Contact
 If you have any questions or need further assistance, please feel free to contact me here on GitHub.
