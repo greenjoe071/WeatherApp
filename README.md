@@ -6,7 +6,6 @@ Building a Mobile Weather App for my portfolio using React Native &amp; Expo.  W
 Before running the project, make sure you have the following installed on your system:
 
 - Node.js: [Download and install Node.js](https://nodejs.org)
-- 
 
 ## Getting Started
 
