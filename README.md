@@ -11,6 +11,8 @@ Before running the project, make sure you have the following installed on your s
 
 Download Expo for your IOS or Android phone: [Visit Expo](https://expo.io/)
 
+You will need to create a .env file in the projects root folder with an API_KEY from www.weatherapi.com
+
 In the terminal type: 
  - npm install
  - npm start
