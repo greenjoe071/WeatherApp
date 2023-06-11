@@ -1,5 +1,5 @@
-import { StatusBar, setStatusBarBackgroundColor } from "expo-status-bar";
-import React, { useCallback, useEffect, useState } from "react";
+import { StatusBar, } from "expo-status-bar";
+import React, { useCallback, useEffect, useState, } from "react";
 import {
     Text,
     View,
@@ -8,9 +8,9 @@ import {
     TextInput,
     ActivityIndicator,
     TouchableOpacity,
-    ImageBackground,
     ScrollView,
-    StyleSheet
+    StyleSheet,
+    Animated
 } from "react-native";
 
 import { theme } from '../theme'
@@ -26,15 +26,15 @@ import { fetchLocation, fetchWeatherForecast } from "../api/weather";
 
 
 //Greeting
-const currentHour = new Date().getHours();
-let greeting = '';
-if (currentHour < 12) {
-    greeting = 'Good Morning! ';
-} else if (currentHour < 18) {
-    greeting = 'Good Afternoon';
-} else {
-    greeting = 'Good Evening';
-}
+// const currentHour = new Date().getHours();
+// let greeting = '';
+// if (currentHour < 12) {
+//     greeting = 'Good Morning! ';
+// } else if (currentHour < 18) {
+//     greeting = 'Good Afternoon';
+// } else {
+//     greeting = 'Good Evening';
+// }
 
 export default function HomeScreen() {
     const [showSearch, toggleSearch] = useState(false);
@@ -111,8 +111,8 @@ export default function HomeScreen() {
                 ) : (
     <SafeAreaView className="flex flex-1">
         
-            {/* SECTION: Search */}
-
+ {/* SECTION: Search */}
+ <ScrollView contentContainerStyle={{ marginTop: 1 }} >
             <View style={{ height: 55 }} className="my-10 mx-4 relative z-50">
                 <View className="flex-row justify-end items-center rounded-full"
                     style={{ backgroundColor: showSearch ? theme.bgWhite(0.9) : "transparent" }}>
@@ -152,7 +152,7 @@ export default function HomeScreen() {
                                             className={"flex-row items-center border-0 p-3 px- mb-1 " + borderStyle}
                                         >
                                             <Feather name="map-pin" size={15} color="gray" />
-                                            <Text className="ml-2">{loc?.name}, {loc?.region}</Text>
+                                            <Text className="ml-2">{loc?.name}, {loc?.country}, {loc?.region}</Text>
                                         </TouchableOpacity>
                                     )
                                 })
@@ -161,7 +161,8 @@ export default function HomeScreen() {
                     ) : null
                 }
             </View>
-            {/* SECTION: Forecast */}
+            
+ {/* SECTION: Forecast */}
 
             <View className="flex-col ">
             <Text className="text-black text-center text-5xl  mb-3">{Math.round(current?.temp_f)}°</Text>
@@ -226,7 +227,7 @@ export default function HomeScreen() {
             </View>
 
 {/* Forecasted weather */}
-<ScrollView contentContainerStyle={{ marginTop: 1 }} >
+
 
             <View className="ml-5 mt-5 mb-2 space-y-3" >
 
@@ -333,7 +334,8 @@ const styles = StyleSheet.create({
 
     forecastBox: {
          opacity: .9,
-        margin: 12,
+        margin: 8,
+        marginBottom: 1,
         padding: 10,
         width: '90%',
         backgroundColor: '#fff',
