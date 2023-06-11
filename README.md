@@ -1,5 +1,9 @@
 # WeatherApp
-Building a Mobile Weather App for my portfolio using React Native &amp; Expo.  Will ultimately be published to Google/Play store
+This app is in process... I'm building a Mobile Weather App for my portfolio using React Native &amp; Expo.  Will ultimately be published to Google/Play store.  It's a simple one page app.
+- Has autocomplete search function
+- Displays current weather and forecasted weather for any city.
+- Uses Tailwind for styling
+- Stores the users city of choice on the device's local storage.
 
 ## Prerequisites
 
@@ -10,7 +14,7 @@ Before running the project, make sure you have the following installed on your s
 
 ## Getting Started
 
-You will need to create a .env file in the projects root folder with an API_KEY from www.weatherapi.com
+You will need to create a .env file in the projects root folder with your own API_KEY from www.weatherapi.com
 
 In the terminal type: 
  - npm install
