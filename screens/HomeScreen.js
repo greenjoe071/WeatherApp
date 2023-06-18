@@ -256,6 +256,7 @@ export default function HomeScreen() {
                     const time = new Date(item.time);
                     const currentTime = new Date()
                     const hour = time.toLocaleTimeString([], {hour: 'numeric', hour12: true});
+                    const chanceOfRain = item?.chance_of_rain
 
                     if (currentTime < time) { 
                          return (
@@ -265,6 +266,9 @@ export default function HomeScreen() {
                             style={{ backgroundColor: theme.bgWhite(0.30) }}
                         >
                             <Text className="text-gray-500 text-sm font-semibold">{hour}</Text>
+                            
+                            <Ionicons name="rainy-outline" size={20} color="gray" />
+                            <Text className="text-gray-500 text-sm font-semibold">{Math.floor(item?.chance_of_rain)}%</Text>
                             <Image
                                 source={weatherImages[item?.condition?.text || 'other']}
                                 className="w-9 h-9"
