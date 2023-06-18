@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Austin Weather - 7, 10 &14 Day Weather Forecast - Texas, United Stat
+</title>
+        <!-- Meta -->
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta id="ctl00_MetaDescTag" name="description" content="Austin weather for 7, 10 and 14 day weather including today, tomorrow and weekend weather - Texas, United States of America"/>
+        <meta id="ctl00_MetaKeywordTag" name="keywords" content="Austin weather forecast, free weather widgets, Texas, United States of America"/>
+        <link rel="canonical" href="https://www.weatherapi.com/weather/q/austin-2653934"/>
+        <link rel="shortcut icon" href="//cdn.weatherapi.com/favicon.ico"/>
+        <link rel="icon" type="image/vnd.microsoft.icon" href="//cdn.weatherapi.com/favicon.ico"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="//cdn.weatherapi.com/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="//cdn.weatherapi.com/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="//cdn.weatherapi.com/favicon-16x16.png"/>
+        <link rel="manifest" href="//cdn.weatherapi.com/site.webmanifest"/>
+        <script src="//cdn.weatherapi.com/v5/assets/plugins/jquery-3.4.1.min.js"></script>
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&amp;display=swap" rel="stylesheet"/>
+        <!-- FontAwesome JS-->
+        <script defer src="//cdn.weatherapi.com/v5/assets/fontawesome/js/all.min.js"></script>
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="//cdn.weatherapi.com/v5/assets/plugins/owlcarousel/dist/assets/owl.carousel.min.css"/>
+        <link rel="stylesheet" href="//cdn.weatherapi.com/v5/assets/plugins/owlcarousel/dist/assets/owl.theme.default.min.css"/>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css"/>
+        <!-- Theme CSS -->
+        <link rel="stylesheet" href="//cdn.weatherapi.com/v5/assets/css/theme.css"/>
+        <style>
+            .sel_ht {
+                height: 3.10em;
+            }
+        </style>
+        <link rel="stylesheet" href="/static/css/weather-4.css"/>
+        <link rel="stylesheet" href="//cdn.weatherapi.com/weather-widget/weather.css" type="text/css" media="all"/>
+        <style type='text/css'>
+            .apixu-weather-wrap {
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        <form name="aspnetForm" method="post" action="./austin-texas-united-states-of-america-2653934?loc=2653934" id="aspnetForm">
+            <div>
+                <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="Lbb2i4q1D2EQ/fmj/irL022NHrF3DRRBe8RPNcKrCtdcX4B/sIKikcAzytpL7cXwzuMzKtmln0dur4dtF20u3toqujYfvy0tNx6yXl/tXxFVQfkU47uQlr0rEGtjyz/uvEG08T4EfOJMBIUn4mL2zP2F0SZ5OBBV3YsKVYBaZ8gK8AgooMj3l1zbER6eR4jN2OPGSiUMikvkArGe8RZWpDUxunAcGbfPu3Pn/Vne7Vy9wooekL1PjxG3QBzRGjZfF3tcAALWQEGcZhn9jAHc2uIYi4pXfqyLJ55UhjiALyHiTATxU8FtJ1xthQeHGZl3yPwUiiO1Ybh7FkirnUYQ2pL9Cepzr+z+sGLCZG4+gebVpoep4lZZfmZz6DW8lrIy2Cz2JASzRij+KrTDwvHSBSy9mRe26WYGhbUkcO1SUszNgRVPdME+4BS2n/vGZhpP1+VNviDtDZI3tLZPGHF52SU+tImJ7Lyh1oicjm7khEgJultCjC1fvK8fi71nfKSAp9DFjziuL0VoSz7fas04Acie6VsEidb3kn3oVHmAt05T+NRQElVVefN+PvcQReBEDuJvUlqFSzeRzWVhQ6ZYjWJ3s+PD8o04xh64KTpiGEaBIVXKwzpTkic/IKSXBifLmmjI+eGWA10YVBuw6WYKss1QIA4AnEfOJ80HURirAAELZ/8Q6m0NfJfdjgBxTQ3baY1tKpSocoI1gt7H+P03QQu/gx4tZXjey5TL0Nn6XOK5wAfwo/lOyiZ6aEWUUBfWOjUfmTXfH5+XFq9QYIRk660iRaOLL3P0UEOBf+G//2uASpB/HXO19NrGRhzXMU5IE6/Y5dSRjlwnhKPJnQmmRVFZ6eAp2EdIl/5LZSSVL2UbGcaDL1SwIofkwRJiUyEZ7n05Xko0iSbzxrIbpb0NHUTvyKVKyys0G8XNm9RUPb1G7rsbiD8xmElASHXmnYDtLCic1R+s2t0P3edaL3W1b1a8keE4HeaPr4ZMLR2PI5upE7i5hOWnGCySzyql4bzbx/m9w/ylS5V6PRLpZLRTFjsF2rkD8l/wZkL+LeXmttYC/UuBjBxssd8yMRftKRcZ43VbGszgXOqnreV50/WNhP6AeeM7am2sQzBDDc1HyJBn7fRnDWqsVByHY+H+5azo7XRXMWco5kf2w4oji2HzdViffFrOjPCCiKTCRlTmz0wZS3Z2hbymVF5SUwsPQpUHY9uPV/LR409mDMF5mx+Ui7QGQ9tGKiL9pXM8LKDuYRKW4Kf2Q1Ze7K53Bwwh4CIyw+WlN0mrcljyURPLrYDw99ovUaVKvnSghq3mR+ieLvStYSQBm/bwp743rJRZOfqxWRoM1h4qrbeLanBT1tSJZWYdJItQWnys3cQH0V1wpTBxfspLddGO5mbV9hC6vnNPs/sqJEm3oUu8qOwV9vlFThqe4SbfcKDbrXlgKCTFQXsLFJSB75wvOlpcK2JaaprEB+TwDT+VLN/y++J8GBeUExIGK3YCJRa+by65YsCuSiIuFMkKEiVIRw3tr7yo9G018I8eSfSj+WiFO09XvIY9y7PrponiOrbZulcLS/H311qsm9cCtmShJhQO0lxbhuyRhJnnaIscSsLfW1q+Dl5j3yEAIa1a8+HAD9xmZ6DGHkdLEWZGSkzGGsG3J5bNEIUWM0sAFLsDBeuYOwhad+5hm1O1fhaCbS+H09gAzb/Cbfk7tC8XiDK/gS4MjHSvLybThih8G2piRWrqYOr2flJXbJ10UKo="/>
+            </div>
+            <div>
+                <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="20DCAB2D"/>
+            </div>
+            <header class="header fixed-top">
+                <div class="branding">
+                    <div class="container-fluid position-relative">
+                        <nav class="navbar navbar-expand-lg">
+                            <div class="site-logo">
+                                <a class="navbar-brand" href="/">
+                                    <img class="logo-icon mr-2" src="//cdn.weatherapi.com/v4/images/weatherapi_logo.png" alt="logo">
+                                </a>
+                            </div>
+                            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navigation">
+                                <ul class="navbar-nav ml-lg-auto">
+                                    <li class="nav-item mr-lg-4">
+                                        <a class="nav-link" href="/api.aspx">Features</a>
+                                    </li>
+                                    <li class="nav-item mr-lg-4">
+                                        <a class="nav-link" href="/pricing.aspx">Pricing</a>
+                                    </li>
+                                    <li class="nav-item mr-lg-4">
+                                        <a class="nav-link" href="/api-explorer.aspx">API Explorer</a>
+                                    </li>
+                                    <li class="nav-item mr-lg-4">
+                                        <a class="nav-link" href="/docs/">Documentation</a>
+                                    </li>
+                                    <li class="nav-item mr-lg-4">
+                                        <a class="nav-link" href="/contact.aspx">Contact</a>
+                                    </li>
+                                    <li class="nav-item mr-lg-0">
+                                        <a class="nav-link" href="/my/">My Account</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <!--//container-->
+                </div>
+                <!--//branding-->
+            </header>
+            <!--//header-->
+            <div class="row">
+                <div class="col-sm-12"></div>
+            </div>
+            <div class="page-content py-5">
+                <section class="options-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <section>
+                            <div class="row">
+                                <div class="col-sm-12 text-right mb-3 mt-3">
+                                    <input type="submit" name="ctl00$butUnitF" value="°F" id="ctl00_butUnitF" class="btn btn-danger"/>
+                                    <input type="submit" name="ctl00$butUnitC" value="°C" id="ctl00_butUnitC" class="btn btn-default"/>
+                                </div>
+                                <div class="col-sm-12 mb-3">
+                                    <div id="ctl00_Search1_PanelSearch" class="input-group">
+                                        <input name="ctl00$Search1$txtSearch" type="text" id="ctl00_Search1_txtSearch" class="form-control" placeholder="Start entering city name, US zip code, Canada postal code, UK postcode, ip, metar, etc."/>
+                                        <div id="er"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="ctl00_MainContentHolder_PanelWeather">
+                                <h1>
+                                    <span class="flag flag-us"></span>
+                                    Austin Weather Forecast
+                        <small class="text-muted">Texas, United States of America</small>
+                                </h1>
+                            </div>
+                            <div id="ctl00_MainContentHolder_PanelWeather2" class="mt-3">
+                                <aside id="weatherapiweatherwidget-2" class="widget widget_weatherapiweatherwidget">
+                                    <div id="weatherapi-weather-london-city-of-london-greater-london-united-kingdom" class="weatherapi-weather-wrap awecf awe_wide awe_without_stats awe-code-1183 awe-desc-rain shm_4 scheme_43">
+                                        <div class="weatherapi-weather-cover">
+                                            <div class="weatherapi-weather-todays-stats-big-pict">
+                                                <img src="//cdn.weatherapi.com/weather/128x128/day/116.png" alt="Weather is Partly cloudy" title="Weather is Partly cloudy"/>
+                                                <span class="weatherapi_descr">Partly cloudy</span>
+                                            </div>
+                                            <!-- /.weatherapi-weather-todays-stats -->
+                                            <div class="weatherapi-weather-todays-stats-location">
+                                                <div class="weatherapi_descr">Wind: 2.2 mph</div>
+                                                <span class="weatherapi_descr">Precip: 0.0 in</span>
+                                                <div class="awe_desc">Pressure: 29.9 in</div>
+                                            </div>
+                                            <!-- location -->
+                                            <div class="weatherapi-weather-current-temp">
+                                                91.9<span>&deg;f</span>
+                                            </div>
+                                            <!-- /.weatherapi-weather-current-temp -->
+                                            <div class="weatherapi-weather-forecast awe_days_5 awecf">
+                                                <div class="weatherapi-weather-forecast-day">
+                                                    <div class="weatherapi-weathe-forecast-day-abbr">Sat</div>
+                                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                                        <div class="">
+                                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                                        </div>
+                                                        <!-- /.weatherapi-weather-todays-stats -->
+                                                    </div>
+                                                    <div class="weatherapi-weather-forecast-day-temp">
+                                                        89.2<span>&deg;f</span>
+                                                    </div>
+                                                </div>
+                                                <div class="weatherapi-weather-forecast-day">
+                                                    <div class="weatherapi-weathe-forecast-day-abbr">Sun</div>
+                                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                                        <div class="">
+                                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                                        </div>
+                                                        <!-- /.weatherapi-weather-todays-stats -->
+                                                    </div>
+                                                    <div class="weatherapi-weather-forecast-day-temp">
+                                                        90.1<span>&deg;f</span>
+                                                    </div>
+                                                </div>
+                                                <div class="weatherapi-weather-forecast-day">
+                                                    <div class="weatherapi-weathe-forecast-day-abbr">Mon</div>
+                                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                                        <div class="">
+                                                            <img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="Sunny" title="Sunny"/>
+                                                        </div>
+                                                        <!-- /.weatherapi-weather-todays-stats -->
+                                                    </div>
+                                                    <div class="weatherapi-weather-forecast-day-temp">
+                                                        94.2<span>&deg;f</span>
+                                                    </div>
+                                                </div>
+                                                <div class="weatherapi-weather-forecast-day">
+                                                    <div class="weatherapi-weathe-forecast-day-abbr">Tue</div>
+                                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                                        <div class="">
+                                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                                        </div>
+                                                        <!-- /.weatherapi-weather-todays-stats -->
+                                                    </div>
+                                                    <div class="weatherapi-weather-forecast-day-temp">
+                                                        96.1<span>&deg;f</span>
+                                                    </div>
+                                                </div>
+                                                <div class="weatherapi-weather-forecast-day">
+                                                    <div class="weatherapi-weathe-forecast-day-abbr">Wed</div>
+                                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                                        <div class="">
+                                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                                        </div>
+                                                        <!-- /.weatherapi-weather-todays-stats -->
+                                                    </div>
+                                                    <div class="weatherapi-weather-forecast-day-temp">
+                                                        96.6<span>&deg;f</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.weatherapi-weather-cover -->
+                                    </div>
+                                    <!-- /.weatherapi-weather-wrap -->
+                                </aside>
+                            </div>
+                            <div class="mt-3">
+                                <div class="mb-3">
+                                    <nav aria-label="Weather Navigation">
+                                        <ul class="pagination justify-content-center">
+                                            <li class="page-item disabled">
+                                                <a class="page-link" href="/weather/q/austin-2653934" tabindex="-1">Previous Day</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="/weather/q/austin-2653934?day=1">Next Day</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <h3>Today's Weather in Austin</h3>
+                                <div>
+                                    <div id="20230616" class="">
+                                        <div class="">
+                                            <div class="table-responsive">
+                                                <table class="table table-condensed table-hover table-bordered small"<thead><tr>
+                                                    <th>
+                                                        Sunrise: 06:29 AM<br/>Sunset: 08:34 PM
+                                                    </th>
+                                                    <th>
+                                                        Moonrise: 05:02 AM<br/>Moonset: 07:35 PM
+                                                    </th>
+                                                    <th style="background-color:#F27628;">
+                                                        Max:<br/>108.3 &deg;f
+                                                    </th>
+                                                    <th style="background-color:#E9D97E;">
+                                                        Min:<br/>78.4 &deg;f
+                                                    </th>
+                                                    <th style="background-color:#E4AD2B;">
+                                                        Avg:<br/>92.1 &deg;f
+                                                    </th>
+                                                    <th style="background-color:#ffffff;">
+                                                        Precip:<br/>0.00 in
+                                                    </th>
+                                                    <th style="background-color:#73F6AB;">
+                                                        Max Wind:<br/>13.6 mph
+                                                    </th>
+                                                </tr>
+</thead></table>
+<table class="table table-condensed table-hover table-bordered small"<thead><tr>
+    <th>&nbsp;</th>
+    <th>
+        <address>
+            Fri 16<br>0:00 am
+        </address>
+    </th>
+    <th>
+        <address>
+            Fri 16<br>3:00 am
+        </address>
+    </th>
+    <th>
+        <address>
+            Fri 16<br>6:00 am
+        </address>
+    </th>
+    <th>
+        <address>
+            Fri 16<br>9:00 am
+        </address>
+    </th>
+    <th>
+        <address>
+            Fri 16<br>12:00 pm
+        </address>
+    </th>
+    <th>
+        <address>
+            Fri 16<br>3:00 pm
+        </address>
+    </th>
+    <th>
+        <address>
+            Fri 16<br>6:00 pm
+        </address>
+    </th>
+    <th>
+        <address>
+            Fri 16<br>8:00 pm
+        </address>
+    </th>
+</tr>
+</thead>
+<tbody>
+    <tr>
+        <td>Icon</td>
+        <td>
+            <img src="//cdn.weatherapi.com/weather/64x64/night/113.png" alt="Clear" title="Clear" class="img-circle" style="width:50px;height:50px;">
+        </td>
+        <td>
+            <img src="//cdn.weatherapi.com/weather/64x64/night/200.png" alt="Thundery outbreaks possible" title="Thundery outbreaks possible" class="img-circle" style="width:50px;height:50px;">
+        </td>
+        <td>
+            <img src="//cdn.weatherapi.com/weather/64x64/night/119.png" alt="Cloudy" title="Cloudy" class="img-circle" style="width:50px;height:50px;">
+        </td>
+        <td>
+            <img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="Sunny" title="Sunny" class="img-circle" style="width:50px;height:50px;">
+        </td>
+        <td>
+            <img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="Sunny" title="Sunny" class="img-circle" style="width:50px;height:50px;">
+        </td>
+        <td>
+            <img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="Sunny" title="Sunny" class="img-circle" style="width:50px;height:50px;">
+        </td>
+        <td>
+            <img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="Sunny" title="Sunny" class="img-circle" style="width:50px;height:50px;">
+        </td>
+        <td>
+            <img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="Sunny" title="Sunny" class="img-circle" style="width:50px;height:50px;">
+        </td>
+    </tr>
+    <tr>
+        <td>Temp</td>
+        <td style="background-color:#F1C151;">82.8 &deg;f</td>
+        <td style="background-color:#E9D97E;">79.2 &deg;f</td>
+        <td style="background-color:#E9D97E;">78.4 &deg;f</td>
+        <td style="background-color:#F1C151;">85.1 &deg;f</td>
+        <td style="background-color:#F98B0F;">102.7 &deg;f</td>
+        <td style="background-color:#F27628;">106.2 &deg;f</td>
+        <td style="background-color:#F27628;">106.7 &deg;f</td>
+        <td style="background-color:#F98B0F;">100.2 &deg;f</td>
+    </tr>
+    <tr>
+        <td>Wind</td>
+        <td style="background-color:#80F9CC;">10.5 mph</td>
+        <td style="background-color:#80F9CC;">10.7 mph</td>
+        <td style="background-color:#80F9CC;">9.4 mph</td>
+        <td style="background-color:#73F6AB;">13.4 mph</td>
+        <td style="background-color:#73F6AB;">13.2 mph</td>
+        <td style="background-color:#80F9CC;">11.6 mph</td>
+        <td style="background-color:#80F9CC;">11.2 mph</td>
+        <td style="background-color:#80F9CC;">9.6 mph</td>
+    </tr>
+    <tr>
+        <td>Precip</td>
+        <td style="background-color:#ffffff;">0.00 in</td>
+        <td style="background-color:#ffffff;">0.00 in</td>
+        <td style="background-color:#ffffff;">0.00 in</td>
+        <td style="background-color:#ffffff;">0.00 in</td>
+        <td style="background-color:#ffffff;">0.00 in</td>
+        <td style="background-color:#ffffff;">0.00 in</td>
+        <td style="background-color:#ffffff;">0.00 in</td>
+        <td style="background-color:#ffffff;">0.00 in</td>
+    </tr>
+    <tr>
+        <td>Cloud</td>
+        <td style="background-color:#EEEEEF;">12%</td>
+        <td style="background-color:#E1E3E4;">42%</td>
+        <td style="background-color:#BCBFC0;">86%</td>
+        <td style="background-color:#FFFFFF;">0%</td>
+        <td style="background-color:#FFFFFF;">2%</td>
+        <td style="background-color:#FFFFFF;">4%</td>
+        <td style="background-color:#FFFFFF;">2%</td>
+        <td style="background-color:#FFFFFF;">2%</td>
+    </tr>
+    <tr>
+        <td>Humidity</td>
+        <td>82%</td>
+        <td>91%</td>
+        <td>94%</td>
+        <td>69%</td>
+        <td>39%</td>
+        <td>27%</td>
+        <td>23%</td>
+        <td>29%</td>
+    </tr>
+    <tr>
+        <td>Pressure</td>
+        <td style="background-color:#7FECF9;">29.7 in</td>
+        <td style="background-color:#7FECF9;">29.7 in</td>
+        <td style="background-color:#7FECF9;">29.8 in</td>
+        <td style="background-color:#7FECF9;">29.8 in</td>
+        <td style="background-color:#7FECF9;">29.8 in</td>
+        <td style="background-color:#7FECF9;">29.7 in</td>
+        <td style="background-color:#7FECF9;">29.7 in</td>
+        <td style="background-color:#7FECF9;">29.7 in</td>
+    </tr>
+</tbody>
+</table></div></div></div></div><p></p>
+<div class="mt-3">
+    <nav aria-label="Weather Navigation">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link" href="/weather/q/austin-2653934" tabindex="-1">Previous Day</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="/weather/q/austin-2653934?day=1">Next Day</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+</div>
+<div class="mt-3">
+    <div class="row">
+        <h2>Weather in Austin for next 7, 10, 14 day and beyond</h2>
+        <p class="report-text">
+            Forecasted <a href="https://www.usaweather.io/weather-forecast/austin-2653934" title="Austin weather" target="_blank" rel="noopener noreferrer">weather in Austin</a>
+            for the next 7, 10, 14 days and beyond is predicting <b>maximum temperature</b>
+            around 48 &#8451;(or 118 &#8457;) on Tuesday 20<sup>th</sup>
+            June at around 4 pm. Over the same period the <b>minimum temperature</b>
+            will be 23 &#8451;or 73 &#8457;on Sunday 18<sup>th</sup>
+            June at around 6 am.
+        </p>
+        <p class="report-text">
+            Weather forecaster is reporting for Austin a Thursday 22<sup>nd</sup>
+            June to be the wettest day in the coming week with around 2.00mm or 0.1 inches of rainfall. Try and stay dry and do make sure to carry an umbrella if you are out and about in Austin.
+        </p>
+        <p class="report-text">
+            This week and coming week <a href="https://www.worldweatheronline.com/austin-weather/texas/us.aspx" title="Austin 14 day weather forecast">Austin weather forecast</a>
+            is predicting windiest of all days will be Saturday 17<sup>th</sup>
+            June as wind will reach 19mph or 31kmph at around 8 pm.
+
+        </p>
+        <h3>Best months to visit Austin?</h3>
+        <p>January and March are the best month to go for holiday or travel to Austin. In these month temperature is at around 61°f and average of 217.2 hours of sunshine in a month.</p>
+        <h3 class="w-100">Coldest months of Austin?</h3>
+        <p>January and February are the coldest months with temperature at around 43°f.</p>
+        <h3 class="w-100">Which months receive most rainfall in Austin?</h3>
+        <p>May and September receive most rainfall with precipitation count of 6.47 inch.</p>
+        <h2 class="w-100">Austin Annual Weather Averages</h2>
+        <h3>Average weather in January</h3>
+        <p>Daytime temperature stays around 61°f and at night it goes to 43°f. In the month of January on average Austin gets 2.49 inch of rain and approximately 4 wet days in the month. For the most part the humidity is around 64%.</p>
+        <h3>Average weather in February</h3>
+        <p>Daytime temperature stays around 64°f and at night it goes to 46°f. In the month of February on average Austin gets 2.07 inch of rain and approximately 6 wet days in the month. For the most part the humidity is around 70%.</p>
+        <h3>Average weather in March</h3>
+        <p>Daytime temperature stays around 72°f and at night it goes to 53°f. In the month of March on average Austin gets 2.71 inch of rain and approximately 5 wet days in the month. For the most part the humidity is around 71%.</p>
+        <h3>Average weather in April</h3>
+        <p>Daytime temperature stays around 79°f and at night it goes to 59°f. In the month of April on average Austin gets 3.40 inch of rain and approximately 6 wet days in the month. For the most part the humidity is around 71%.</p>
+        <h3>Average weather in May</h3>
+        <p>Daytime temperature stays around 85°f and at night it goes to 66°f. In the month of May on average Austin gets 6.47 inch of rain and approximately 9 wet days in the month. For the most part the humidity is around 75%.</p>
+        <h3>Average weather in June</h3>
+        <p>Daytime temperature stays around 92°f and at night it goes to 73°f. In the month of June on average Austin gets 3.02 inch of rain and approximately 7 wet days in the month. For the most part the humidity is around 70%.</p>
+        <h3>Average weather in July</h3>
+        <p>Daytime temperature stays around 96°f and at night it goes to 75°f. In the month of July on average Austin gets 2.31 inch of rain and approximately 7 wet days in the month. For the most part the humidity is around 64%.</p>
+        <h3>Average weather in August</h3>
+        <p>Daytime temperature stays around 97°f and at night it goes to 76°f. In the month of August on average Austin gets 3.23 inch of rain and approximately 6 wet days in the month. For the most part the humidity is around 59%.</p>
+        <h3>Average weather in September</h3>
+        <p>Daytime temperature stays around 90°f and at night it goes to 72°f. In the month of September on average Austin gets 4.15 inch of rain and approximately 8 wet days in the month. For the most part the humidity is around 66%.</p>
+        <h3>Average weather in October</h3>
+        <p>Daytime temperature stays around 81°f and at night it goes to 62°f. In the month of October on average Austin gets 4.10 inch of rain and approximately 6 wet days in the month. For the most part the humidity is around 65%.</p>
+        <h3>Average weather in November</h3>
+        <p>Daytime temperature stays around 69°f and at night it goes to 52°f. In the month of November on average Austin gets 3.00 inch of rain and approximately 5 wet days in the month. For the most part the humidity is around 69%.</p>
+        <h3>Average weather in December</h3>
+        <p>Daytime temperature stays around 62°f and at night it goes to 46°f. In the month of December on average Austin gets 2.72 inch of rain and approximately 5 wet days in the month. For the most part the humidity is around 69%.</p>
+        <h3 class="w-100">Buy Historical Weather Data</h3>
+        <p class="report-text">Apart from averages, the data is also available in hourly interval.
+              
+        <ul>
+            <li>Temperature(&deg;C/&deg;F)</li>
+            <li>Visibility (km or miles)</li>
+            <li>Pressure (mb or inches)</li>
+            <li>Cloud (%)</li>
+            <li>Humidity (%)</li>
+            <li>Wind Speed (km/h, mph, knots or m/s)</li>
+            <li>Wind Gust (km/h, mph, knots or m/s)</li>
+            <li>Snow amount (cm)</li>
+            <li>Rain amount (mm or inches)</li>
+            <li>UV Index</li>
+            <li>Wind direction (degree)</li>
+            <li>Dew point (&deg;C/&deg;F)</li>
+            <li>Sky condition description text</li>
+        </ul>
+</p>
+<p class="report-text">
+    <a href="https://www.worldweatheronline.com/hwd/" title="Historical Weather Data" target="_blank" rel="noopener noreferrer">Find out more about Historical Weather Data</a>
+    .
+</p>
+</div></div></div>
+<div id="ctl00_MainContentHolder_PanelWidget">
+    <div class="mt-3">
+        <div class="row">
+            <div id="mapholder" class="well"></div>
+            <input name="ctl00$MainContentHolder$hdlat" type="hidden" id="ctl00_MainContentHolder_hdlat" value="30.27"/>
+            <input name="ctl00$MainContentHolder$hdlon" type="hidden" id="ctl00_MainContentHolder_hdlon" value="-97.74"/>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <div class="row col-12">
+            <a name="widgets"></a>
+            <h3>Austin Free Weather Widget for Website</h3>
+            <blockquote>
+                <b>
+                    WeatherAPI.com free weather widgets could be easily added to any website or content management systems (CMS) like Wordpress, Drupal or Joomla. If your website caters for areas in and around <a href="https://www.usaweather.io/weather-forecast/austin-2653934" title="Austin weather" target="_blank" rel="noopener noreferrer">weather in Austin</a>
+                    then our modern and responsive weather widgets will enhance your user experience by providing weather information.
+                </b>
+            </blockquote>
+            <p>Simply select your preferred weather widget option below and then copy the HTML code for that widget from the box below it. Paste the HTML code on your website and enjoy the weather!
+                </p>
+            <p>Our weather widgets work on both HTTP and HTTPS websites with no changes required. Weather loads asynchronous i.e. no impact on your website loading time for better search engine ranking. Our widgets are responsive i.e. it will auto adjust the width according to where you place it on your website.
+                </p>
+            <div class="col-sm-6 well">
+                <h4>Weather Widget #1</h4>
+                <aside id="weatherapiweatherwidget-2" class="widget widget_weatherapiweatherwidget">
+                    <div id="weatherapi-weather-london-city-of-london-greater-london-united-kingdom" class="weatherapi-weather-wrap awecf awe_wide awe_without_stats awe-code-1183 awe-desc-rain shm_4 scheme_41">
+                        <div class="weatherapi-weather-cover">
+                            <div class="weatherapi-weather-todays-stats-location">
+                                <div class="awe_desc">Austin</div>
+                            </div>
+                            <div class="weatherapi-weather-todays-stats-big-pict">
+                                <img src="//cdn.weatherapi.com/weather/128x128/day/116.png" alt="Weather is Partly cloudy" title="Weather is Partly cloudy"/>
+                                <span class="weatherapi_descr">Partly cloudy</span>
+                            </div>
+                            <!-- /.weatherapi-weather-todays-stats -->
+                            <div class="weatherapi-weather-todays-stats-location">
+                                <div class="weatherapi_descr">Wind: 2.2 mph</div>
+                                <span class="weatherapi_descr">Precip: 0.0 in</span>
+                                <div class="awe_desc">Pressure: 29.9 in</div>
+                            </div>
+                            <!-- location -->
+                            <div class="weatherapi-weather-current-temp">
+                                91.9<span>&deg;f</span>
+                            </div>
+                            <!-- /.weatherapi-weather-current-temp -->
+                            <div class="weatherapi-weather-forecast awe_days_5 awecf">
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Sat</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        89.2<span>&deg;f</span>
+                                    </div>
+                                </div>
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Sun</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        90.1<span>&deg;f</span>
+                                    </div>
+                                </div>
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Mon</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="Sunny" title="Sunny"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        94.2<span>&deg;f</span>
+                                    </div>
+                                </div>
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Tue</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        96.1<span>&deg;f</span>
+                                    </div>
+                                </div>
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Wed</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        96.6<span>&deg;f</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.weatherapi-weather-cover -->
+                    </div>
+                    <!-- /.weatherapi-weather-wrap -->
+                </aside>
+                <p></p>
+                <b>HTML Code </b>
+                <textarea name="ctl00$MainContentHolder$txtCodeWidget1" rows="10" cols="20" readonly="readonly" id="ctl00_MainContentHolder_txtCodeWidget1" class="form-control">&lt;div id=&quot;weatherapi-weather-widget-1 &quot;&gt;&lt;/div &gt;&lt;script type=&#39;text/javascript &#39;src=&#39;https://www.weatherapi.com/weather/widget.ashx?loc=2653934 &amp;wid=1 &amp;tu=2 &amp;div=weatherapi-weather-widget-1 &#39;async &gt;&lt;/script &gt;&lt;noscript &gt;&lt;a href=&quot;https://www.weatherapi.com/weather/q/austin-2653934 &quot;alt=&quot;Hour by hour Austin weather &quot;&gt;10 day hour by hour Austin weather &lt;/a &gt;&lt;/noscript &gt;</textarea>
+            </div>
+            <div class="col-sm-6 well">
+                <h4>Weather Widget #2</h4>
+                <aside id="weatherapiweatherwidget-2" class="widget widget_weatherapiweatherwidget">
+                    <div id="weatherapi-weather-london-city-of-london-greater-london-united-kingdom" class="weatherapi-weather-wrap awecf awe_wide awe_without_stats awe-code-1183 awe-desc-rain shm_4 scheme_42">
+                        <div class="weatherapi-weather-cover">
+                            <div class="weatherapi-weather-todays-stats-location">
+                                <div class="awe_desc">Austin</div>
+                            </div>
+                            <div class="weatherapi-weather-todays-stats-big-pict">
+                                <img src="//cdn.weatherapi.com/weather/128x128/day/116.png" alt="Weather is Partly cloudy" title="Weather is Partly cloudy"/>
+                                <span class="weatherapi_descr">Partly cloudy</span>
+                            </div>
+                            <!-- /.weatherapi-weather-todays-stats -->
+                            <div class="weatherapi-weather-todays-stats-location">
+                                <div class="weatherapi_descr">Wind: 2.2 mph</div>
+                                <span class="weatherapi_descr">Precip: 0.0 in</span>
+                                <div class="awe_desc">Pressure: 29.9 in</div>
+                            </div>
+                            <!-- location -->
+                            <div class="weatherapi-weather-current-temp">
+                                91.9<span>&deg;f</span>
+                            </div>
+                            <!-- /.weatherapi-weather-current-temp -->
+                            <div class="weatherapi-weather-forecast awe_days_5 awecf">
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Sat</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        89.2<span>&deg;f</span>
+                                    </div>
+                                </div>
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Sun</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        90.1<span>&deg;f</span>
+                                    </div>
+                                </div>
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Mon</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="Sunny" title="Sunny"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        94.2<span>&deg;f</span>
+                                    </div>
+                                </div>
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Tue</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        96.1<span>&deg;f</span>
+                                    </div>
+                                </div>
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Wed</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        96.6<span>&deg;f</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.weatherapi-weather-cover -->
+                    </div>
+                    <!-- /.weatherapi-weather-wrap -->
+                </aside>
+                <p></p>
+                <b>HTML Code </b>
+                <textarea name="ctl00$MainContentHolder$txtCodeWidget2" rows="10" cols="20" readonly="readonly" id="ctl00_MainContentHolder_txtCodeWidget2" class="form-control">&lt;div id=&quot;weatherapi-weather-widget-2 &quot;&gt;&lt;/div &gt;&lt;script type=&#39;text/javascript &#39;src=&#39;https://www.weatherapi.com/weather/widget.ashx?loc=2653934 &amp;wid=2 &amp;tu=2 &amp;div=weatherapi-weather-widget-2 &#39;async &gt;&lt;/script &gt;&lt;noscript &gt;&lt;a href=&quot;https://www.weatherapi.com/weather/q/austin-2653934 &quot;alt=&quot;Hour by hour Austin weather &quot;&gt;10 day hour by hour Austin weather &lt;/a &gt;&lt;/noscript &gt;</textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 well">
+                <h4>Weather Widget #3</h4>
+                <aside id="weatherapiweatherwidget-2" class="widget widget_weatherapiweatherwidget">
+                    <div id="weatherapi-weather-london-city-of-london-greater-london-united-kingdom" class="weatherapi-weather-wrap awecf awe_wide awe_without_stats awe-code-1183 awe-desc-rain shm_4 scheme_43">
+                        <div class="weatherapi-weather-cover">
+                            <div class="weatherapi-weather-todays-stats-location">
+                                <div class="awe_desc">Austin</div>
+                            </div>
+                            <div class="weatherapi-weather-todays-stats-big-pict">
+                                <img src="//cdn.weatherapi.com/weather/128x128/day/116.png" alt="Weather is Partly cloudy" title="Weather is Partly cloudy"/>
+                                <span class="weatherapi_descr">Partly cloudy</span>
+                            </div>
+                            <!-- /.weatherapi-weather-todays-stats -->
+                            <div class="weatherapi-weather-todays-stats-location">
+                                <div class="weatherapi_descr">Wind: 2.2 mph</div>
+                                <span class="weatherapi_descr">Precip: 0.0 in</span>
+                                <div class="awe_desc">Pressure: 29.9 in</div>
+                            </div>
+                            <!-- location -->
+                            <div class="weatherapi-weather-current-temp">
+                                91.9<span>&deg;f</span>
+                            </div>
+                            <!-- /.weatherapi-weather-current-temp -->
+                            <div class="weatherapi-weather-forecast awe_days_5 awecf">
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Sat</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        89.2<span>&deg;f</span>
+                                    </div>
+                                </div>
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Sun</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        90.1<span>&deg;f</span>
+                                    </div>
+                                </div>
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Mon</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="Sunny" title="Sunny"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        94.2<span>&deg;f</span>
+                                    </div>
+                                </div>
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Tue</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        96.1<span>&deg;f</span>
+                                    </div>
+                                </div>
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Wed</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        96.6<span>&deg;f</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.weatherapi-weather-cover -->
+                    </div>
+                    <!-- /.weatherapi-weather-wrap -->
+                </aside>
+                <p></p>
+                <b>HTML Code </b>
+                <textarea name="ctl00$MainContentHolder$txtCodeWidget3" rows="10" cols="20" readonly="readonly" id="ctl00_MainContentHolder_txtCodeWidget3" class="form-control">&lt;div id=&quot;weatherapi-weather-widget-3 &quot;&gt;&lt;/div &gt;&lt;script type=&#39;text/javascript &#39;src=&#39;https://www.weatherapi.com/weather/widget.ashx?loc=2653934 &amp;wid=3 &amp;tu=2 &amp;div=weatherapi-weather-widget-3 &#39;async &gt;&lt;/script &gt;&lt;noscript &gt;&lt;a href=&quot;https://www.weatherapi.com/weather/q/austin-2653934 &quot;alt=&quot;Hour by hour Austin weather &quot;&gt;10 day hour by hour Austin weather &lt;/a &gt;&lt;/noscript &gt;</textarea>
+            </div>
+            <div class="col-sm-6 well">
+                <h4>Weather Widget #4</h4>
+                <aside id="weatherapiweatherwidget-2" class="widget widget_weatherapiweatherwidget">
+                    <div id="weatherapi-weather-london-city-of-london-greater-london-united-kingdom" class="weatherapi-weather-wrap awecf awe_wide awe_without_stats awe-code-1183 awe-desc-rain shm_4 scheme_44">
+                        <div class="weatherapi-weather-cover">
+                            <div class="weatherapi-weather-todays-stats-location">
+                                <div class="awe_desc">Austin</div>
+                            </div>
+                            <div class="weatherapi-weather-todays-stats-big-pict">
+                                <img src="//cdn.weatherapi.com/weather/128x128/day/116.png" alt="Weather is Partly cloudy" title="Weather is Partly cloudy"/>
+                                <span class="weatherapi_descr">Partly cloudy</span>
+                            </div>
+                            <!-- /.weatherapi-weather-todays-stats -->
+                            <div class="weatherapi-weather-todays-stats-location">
+                                <div class="weatherapi_descr">Wind: 2.2 mph</div>
+                                <span class="weatherapi_descr">Precip: 0.0 in</span>
+                                <div class="awe_desc">Pressure: 29.9 in</div>
+                            </div>
+                            <!-- location -->
+                            <div class="weatherapi-weather-current-temp">
+                                91.9<span>&deg;f</span>
+                            </div>
+                            <!-- /.weatherapi-weather-current-temp -->
+                            <div class="weatherapi-weather-forecast awe_days_5 awecf">
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Sat</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        89.2<span>&deg;f</span>
+                                    </div>
+                                </div>
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Sun</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        90.1<span>&deg;f</span>
+                                    </div>
+                                </div>
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Mon</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="Sunny" title="Sunny"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        94.2<span>&deg;f</span>
+                                    </div>
+                                </div>
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Tue</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        96.1<span>&deg;f</span>
+                                    </div>
+                                </div>
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Wed</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        96.6<span>&deg;f</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.weatherapi-weather-cover -->
+                    </div>
+                    <!-- /.weatherapi-weather-wrap -->
+                </aside>
+                <p></p>
+                <b>HTML Code </b>
+                <textarea name="ctl00$MainContentHolder$txtCodeWidget4" rows="10" cols="20" readonly="readonly" id="ctl00_MainContentHolder_txtCodeWidget4" class="form-control">&lt;div id=&quot;weatherapi-weather-widget-4 &quot;&gt;&lt;/div &gt;&lt;script type=&#39;text/javascript &#39;src=&#39;https://www.weatherapi.com/weather/widget.ashx?loc=2653934 &amp;wid=4 &amp;tu=2 &amp;div=weatherapi-weather-widget-4 &#39;async &gt;&lt;/script &gt;&lt;noscript &gt;&lt;a href=&quot;https://www.weatherapi.com/weather/q/austin-2653934 &quot;alt=&quot;Hour by hour Austin weather &quot;&gt;10 day hour by hour Austin weather &lt;/a &gt;&lt;/noscript &gt;</textarea>
+            </div>
+            <div class="col-sm-6 well">
+                <h4>Weather Widget #5</h4>
+                <aside id="weatherapiweatherwidget-2" class="widget widget_weatherapiweatherwidget">
+                    <div id="weatherapi-weather-london-city-of-london-greater-london-united-kingdom" class="weatherapi-weather-wrap awecf awe_wide awe_without_stats awe-code-1183 awe-desc-rain shm_4 scheme_45">
+                        <div class="weatherapi-weather-cover">
+                            <div class="weatherapi-weather-todays-stats-location">
+                                <div class="awe_desc">Austin</div>
+                            </div>
+                            <div class="weatherapi-weather-todays-stats-big-pict">
+                                <img src="//cdn.weatherapi.com/weather/128x128/day/116.png" alt="Weather is Partly cloudy" title="Weather is Partly cloudy"/>
+                                <span class="weatherapi_descr">Partly cloudy</span>
+                            </div>
+                            <!-- /.weatherapi-weather-todays-stats -->
+                            <div class="weatherapi-weather-todays-stats-location">
+                                <div class="weatherapi_descr">Wind: 2.2 mph</div>
+                                <span class="weatherapi_descr">Precip: 0.0 in</span>
+                                <div class="awe_desc">Pressure: 29.9 in</div>
+                            </div>
+                            <!-- location -->
+                            <div class="weatherapi-weather-current-temp">
+                                91.9<span>&deg;f</span>
+                            </div>
+                            <!-- /.weatherapi-weather-current-temp -->
+                            <div class="weatherapi-weather-forecast awe_days_5 awecf">
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Sat</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        89.2<span>&deg;f</span>
+                                    </div>
+                                </div>
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Sun</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        90.1<span>&deg;f</span>
+                                    </div>
+                                </div>
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Mon</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="Sunny" title="Sunny"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        94.2<span>&deg;f</span>
+                                    </div>
+                                </div>
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Tue</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        96.1<span>&deg;f</span>
+                                    </div>
+                                </div>
+                                <div class="weatherapi-weather-forecast-day">
+                                    <div class="weatherapi-weather-forecast-day-abbr">Wed</div>
+                                    <div class="weatherapi-weather-forecast-day-abbr">
+                                        <div class="">
+                                            <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Patchy rain possible" title="Patchy rain possible"/>
+                                        </div>
+                                        <!-- /.weatherapi-weather-todays-stats -->
+                                    </div>
+                                    <div class="weatherapi-weather-forecast-day-temp">
+                                        96.6<span>&deg;f</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.weatherapi-weather-cover -->
+                    </div>
+                    <!-- /.weatherapi-weather-wrap -->
+                </aside>
+                <p></p>
+                <b>HTML Code </b>
+                <textarea name="ctl00$MainContentHolder$txtCodeWidget5" rows="10" cols="20" readonly="readonly" id="ctl00_MainContentHolder_txtCodeWidget5" class="form-control">&lt;div id=&quot;weatherapi-weather-widget-5 &quot;&gt;&lt;/div &gt;&lt;script type=&#39;text/javascript &#39;src=&#39;https://www.weatherapi.com/weather/widget.ashx?loc=2653934 &amp;wid=5 &amp;tu=2 &amp;div=weatherapi-weather-widget-5 &#39;async &gt;&lt;/script &gt;&lt;noscript &gt;&lt;a href=&quot;https://www.weatherapi.com/weather/q/austin-2653934 &quot;alt=&quot;Hour by hour Austin weather &quot;&gt;10 day hour by hour Austin weather &lt;/a &gt;&lt;/noscript &gt;</textarea>
+            </div>
+        </div>
+        <div class="col-sm-12 mt-3">
+            <div class="row">
+                <h4>NEARBY WEATHER</h4>
+                <div class="col-6 col-lg-2 col-sm-2 col-md-2">
+                    <a href="/weather/q/austin-2653934" title="Austin weather" class="">Austin</a>
+                </div>
+                <p>&nbsp;</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-3">
+    <div class="col-12">
+        <h4>Recently Visited</h4>
+        <div class="col-sm-12">
+            <ul class="list-inline">
+                <li class="list-inline-item fav-wx-module" id="f2618724">
+                    <button type="button" class="close" aria-label="Close" onclick="remfav('NXIkhQ9aAps=','2618724');">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <small>New York, US</small>
+                    <a href="/weather/q/new-york-2618724">
+                        <p>
+                            <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="Partly cloudy" class="imgfavs"/>
+                            <span class="text-center">
+                                <small>24.4 &deg;c (75.9 &deg;f)</small>
+                            </span>
+                        </p>
+                    </a>
+                </li>
+                <li class="list-inline-item fav-wx-module" id="f2653934">
+                    <button type="button" class="close" aria-label="Close" onclick="remfav('sdGjHpkDnBM=','2653934');">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <small>Austin, US</small>
+                    <a href="/weather/q/austin-2653934">
+                        <p>
+                            <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="Partly cloudy" class="imgfavs"/>
+                            <span class="text-center">
+                                <small>33.3 &deg;c (91.9 &deg;f)</small>
+                            </span>
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</section></div></section></div>
+<section class="cta-section text-center py-5 theme-bg-dark position-relative">
+    <div class="theme-bg-shapes-right"></div>
+    <div class="theme-bg-shapes-left"></div>
+    <div class="container">
+        <h3 class="mb-2 text-white mb-3">Quick and Easy Signup for Weather API</h3>
+        <div class="section-intro text-white mb-3 single-col-max mx-auto">WeatherAPI.com makes it super easy to integrate our realtime, daily, hourly and 15 min interval weather forecast data, historical weather, marine weather, bulk request, air quality data, autocomplete, time zone, astronomy and sports data into your new or existing project.</div>
+        <div class="pt-3 text-center">
+            <a class="btn btn-light" href="/signup.aspx" title="Weather API">
+                Get Started<i class="fas fa-arrow-alt-circle-right ml-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<!--//cta-section-->
+<footer class="footer">
+    <div class="container py-5 mb-3">
+        <div class="row">
+            <div class="footer-col col-12 col-lg-3">
+                <h4 class="col-heading">Developers</h4>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="/pricing.aspx">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="/api.aspx" title="Free Weather API">APIs</a>
+                    </li>
+                    <li>
+                        <a href="/docs/" title="Free Weather API Docs">Docs</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/weatherapicom/" title="Weather API Code Library" target="_blank">Github</a>
+                    </li>
+                    <li>
+                        <a href="https://app.swaggerhub.com/apis-docs/WeatherAPI.com/WeatherAPI/1.0.2-oas3-oas3.1-oas3.1/" title="WeatherAPI.com Swagger" target="_blank">Swagger</a>
+                    </li>
+                    <li>
+                        <a href="/weather/">Weather</a>
+                    </li>
+                    <li>
+                        <a href="https://blog.weatherapi.com/" title="Weather API Blog">Blog</a>
+                    </li>
+                    <li>
+                        <a href="https://www.climately.com/" target="_blank" title="Bulk CSV Weather Data">Climately.com</a>
+                    </li>
+                    <li>
+                        <a href="https://www.worldweatheronline.com/weather-api/" target="_blank" title="Premium Weather API">Premium Weather API</a>
+                    </li>
+                    <li>
+                        <a href="https://www.worldweatheronline.com/hwd/" target="_blank" title="Historical Weather">Weather History</a>
+                    </li>
+                </ul>
+            </div>
+            <!--//footer-col-->
+            <div class="footer-col col-12 col-lg-3">
+                <h4 class="col-heading">&nbsp;</h4>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="/about.aspx">About Us</a>
+                    </li>
+                    <li>
+                        <a href="/contact.aspx">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="/privacy.aspx">Privacy</a>
+                    </li>
+                    <li>
+                        <a href="/terms.aspx">Terms of Services</a>
+                    </li>
+                </ul>
+            </div>
+            <!--//footer-col-->
+        </div>
+        <!--//row-->
+    </div>
+    <!--//container-->
+    <div class="container">
+        <div class="col-12 small">
+            Popular Holiday Destinations: <a href="/weather/q/gran-canaria-canarias-spain-2777802" title="Gran Canaria Weather">Gran Canaria</a>
+            | <a href="/weather/q/tenerife-canarias-spain-2777803" title="Tenerife weather">Tenerife</a>
+            | <a href="/weather/q/majorca-islas-baleares-spain-2777794" title="Majorca weather">Majorca</a>
+            | <a href="/weather/q/lanzarote-canarias-spain-2777797" title="Lanzarote weather">Lanzarote</a>
+            | <a href="/weather/q/fuerteventura-canarias-spain-2821184" title="Fuerteventura weather">Fuerteventura</a>
+            | <a href="/weather/q/crete-crete-greece-2864288" title="Crete weather">Crete</a>
+            | <a href="/weather/q/new-york-new-york-united-states-of-america-2618724" title="New York weather">New York</a>
+            | <a href="/weather/q/rome-lazio-italy-1284918" title="Rome weather">Rome</a>
+            | <a href="/weather/q/dubai-dubai-united-arab-emirates-384" title="Dubai weather">Dubai</a>
+            | <a href="/weather/q/london-city-of-london-greater-london-united-kingdom-2801268" title="London weather">London</a>
+            | <a href="/weather/q/sydney-new-south-wales-australia-136022" title="Sydney weather">Sydney</a>
+            | <a href="/weather/q/moscow-moscow-city-russia-2145091" title="Moscow weather">Moscow</a>
+        </div>
+        <hr>
+    </div>
+    <div class="footer-bottom text-center pb-5">
+        <small class="copyright">
+            Copyright &copy;<a href="https://www.weatherapi.com" title="Weather API">Weather API</a>
+        </small>
+        <ul class="social-list list-unstyled pt-4 mb-0">
+            <li class="list-inline-item">
+                <a href="https://github.com/weatherapicom/" target="_blank">
+                    <i class="fab fa-github fa-fw"></i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://twitter.com/weatherapidev/" target="_blank">
+                    <i class="fab fa-twitter fa-fw"></i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://www.facebook.com/weatherapidev" target="_blank">
+                    <i class="fab fa-facebook-f fa-fw"></i>
+                </a>
+            </li>
+        </ul>
+        <!--//social-list-->
+    </div>
+</footer>
+</form><script src="/static/js/app-v4.js" async></script>
+<!-- Javascript -->
+<script data-ad-client="ca-pub-9331879250191264" defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type="text/javascript" src="//maps.google.com/maps/api/js?key=AIzaSyA-zrtmfOwm2Fd3UjvSHmP95kVdhdkbRUw" defer></script>
+<script type="text/javascript" src="/static/js/core-5.js" defer></script>
+<!-- Page Specific JS -->
+<script></script>
+</body></html>

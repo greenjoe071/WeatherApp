@@ -91,7 +91,8 @@ export default function HomeScreen() {
     const handleTextDebounce = useCallback(debounce(handleSearch, 1200), []) 
 
     const {current, location} = weather
-    // console.log(weather.forecast.forecastday[0].day?.maxtemp_f)
+    // console.log("max temp: ", weather.forecast.forecastday[0].day?.maxtemp_f - 5)
+    // console.log("avg temp: ", weather.forecast.forecastday[0].day?.avgtemp_f)
 
     return (
 
@@ -147,8 +148,8 @@ export default function HomeScreen() {
                                     let borderStyle = showBorder ? "border-b-2 border-b-gray-300" : ""
                                     return (
                                         <TouchableOpacity
-                                            onPress={() => getLocations(loc)}
                                             key={index}
+                                            onPress={() => getLocations(loc)}
                                             className={"flex-row items-center border-0 p-3 px- mb-1 " + borderStyle}
                                         >
                                             <Feather name="map-pin" size={15} color="gray" />
@@ -165,7 +166,7 @@ export default function HomeScreen() {
  {/* SECTION: Forecast */}
 
             <View className="flex-col ">
-            <Text className="text-black text-center text-5xl  mb-3">{Math.round(current?.temp_f)}°</Text>
+            <Text className="text-black text-center text-5xl  mb-3">{Math.floor(current?.temp_f)}°</Text>
                 <Text className="text-black text-center text-3xl font-bold">
                     {location?.name}
                     <Text className="text-lg font-semibold text-gray-600">
@@ -188,8 +189,8 @@ export default function HomeScreen() {
                     className="w-20 h-20"
                 />
                 <View className="my-3 ml-3">
-                    <Text className="font-medium text-base">H: {Math.round(weather?.forecast?.forecastday[0]?.day?.maxtemp_f)}°</Text>
-                    <Text className="font-medium text-base">L: {Math.round(weather?.forecast?.forecastday[0]?.day?.mintemp_f)}°</Text>
+                    <Text className="font-medium text-base">H: {Math.floor(weather?.forecast?.forecastday[0]?.day?.maxtemp_f - 5)}°</Text>
+                    <Text className="font-medium text-base">L: {Math.floor(weather?.forecast?.forecastday[0]?.day?.mintemp_f)}°</Text>
                 </View>
             </View>
             {/* Other Stats                 */}
@@ -227,20 +228,21 @@ export default function HomeScreen() {
             </View>
 
 {/* Forecasted weather */}
-
-
-            <View className="ml-5 mt-5 mb-2 space-y-3" >
-
+            <View className="ml-5 mt-1 space-y-3" >
                 <View className="flex-row items-center mx-5 space-x-2">
                     <Ionicons name="ios-calendar-outline" size={20} color="gray" />
                     <Text className="text-sm text-gray-600">Daily Forecast</Text>
                 </View>
     {
         weather?.forecast?.forecastday?.map((item, index) => {
-            let date = new Date(item.date)
+            const today = new Date(); //trying this
+            const tomorrow = new Date(today.getTime() + (1000 * 60 * 60 * 24)); //trying this
+            let date = new Date(item.date)  // original
             let options = {weekday: 'short'}
             let dayName = date.toLocaleDateString('en-US', options)
             dayName = dayName.split(',')[0]
+
+            if (date >=tomorrow) {
             return (
                 <View 
                 key={index}
@@ -253,15 +255,15 @@ export default function HomeScreen() {
                     style={{ width: 30, height: 30 }}
                     />
                         <Text> {item?.day?.condition?.text}</Text>
-                        <Text >{Math.round(item?.day?.maxtemp_f)}° L: {Math.round(item?.day?.mintemp_f)}° </Text>
+                        <Text >{Math.floor(item?.day?.maxtemp_f - 6)}° L: {Math.floor(item?.day?.mintemp_f)}° </Text>
             </View>
             
-            )
+            )}
         })
     }
-        
-
+ 
         </View>
+   
         </ScrollView>
             
         
@@ -277,63 +279,9 @@ export default function HomeScreen() {
 
 
 const styles = StyleSheet.create({
-    container: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        justifyContent: 'flex-start',
-        flex: 1,
-    },
-
-    image: {
-        flex: 1,
-        resizeMode: 'cover',
-    },
-    textInput: {
-        marginTop: 10,
-        height: 40,
-        margin: 12,
-        padding: 10,
-        width: '90%',
-        maxWidth: 500,
-        backgroundColor: '#fff',
-        borderRadius: 10,
-
-    },
-    tempText: {
-        fontSize: 60,
-        fontWeight: 'bold',
-        textAlign: 'center',
-        margin: 10,
-        marginBottom: 1,
-    },
-
-    currentInfoWrapper: {
-        flexDirection: "row",
-        alignItems: 'center',
-        justifyContent: "space-between",
-
-    },
-    HiLowWrapper: {
-        flexDirection: "column",
-        // alignItems: 'center',
-        // justifyContent: "center",
-    },
-    currentForecastBox: {
-        //  opacity: .5,
-        margin: 5,
-        padding: 10,
-        width: 100,
-        // minWidth: 100,
-        // maxWidth: 500,
-        // backgroundColor: '#fff',
-        borderRadius: 10,
-        flexDirection: "column",
-        justifyContent: "space-around",
-        alignItems: 'center',
-    },
-
+ 
     forecastBox: {
-         opacity: .9,
+        opacity: .9,
         margin: 8,
         marginBottom: 1,
         padding: 10,
@@ -343,53 +291,6 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-around",
         alignItems: 'center',
-    },
-
-    // '@media (min-width: 768px)': {
-    //   forecastBox: {
-    //     margin: 12,
-    //     padding: 10,
-    //     width: '90%',
-    //     minWidth: 350,
-    //     maxWidth: 500,
-    //     backgroundColor: 'red',
-    //     borderRadius: 10,
-    //     flexDirection: "row",
-    //     justifyContent: "space-around",
-    //     alignItems: 'center',
-    //   },
-    // },
-
-
-
-    infoWrapperColumn: {
-        flexDirection: "column",
-        marginHorizontal: 20,
-
-    },
-    infoWrapperTextLine1: {
-        fontWeight: "bold",
-    },
-    infoWrapperTextLine2: {
-
-    },
-    forecastWrapper: {
-        // opacity: .5,
-        // margin: 12,
-        // padding: 10,
-        width: '90%',
-        maxWidth: 500,
-        backgroundColor: '#fff',
-        borderRadius: 10,
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: 'center',
-
-    },
-    forecastWrapperDay: {
-        opacity: 1,
-        fontWeight: "400",
-        fontSize: 18,
     },
 
 });
