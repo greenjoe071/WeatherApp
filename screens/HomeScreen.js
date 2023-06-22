@@ -42,14 +42,18 @@ export default function HomeScreen() {
     const [locations, setLocations] = useState([])
     const [weather, setWeather] = useState({})
     const [loading, setLoading] = useState(true)
-
+    
+    
+   
 
     const getLocations = (loc) => {
-        console.log("You entered: ", loc);
+        console.log("You entered: ", loc); 
         setLocations([]);
         setLoading(true);
+        
         fetchWeatherForecast({
             cityName: loc.name,
+            // cityName: loc.name && loc.region,// make this both loc.name and loc.region?
             days: "7"
         }).then(data => {
             setWeather(data)
@@ -58,16 +62,23 @@ export default function HomeScreen() {
             console.log("got forecast data: ", data)
         })
         toggleSearch(false)
-
     }
 
     const handleSearch = value => {
         if (value.length > 2) {
             fetchLocation({ cityName: value }).then(data => {
                 setLocations(data)
+                console.log("Value: ", value) // do i need to make value "city name and region"?  actually i probably need to make value equal to what is selected in the drop down?
             })
         }
     }
+
+    // const handleSelect = (option) => {
+    //     setLocations([option])
+    // }
+
+    // limiting api calls
+    const handleTextDebounce = useCallback(debounce(handleSearch, 900), [])
 
     useEffect(() => {
         initialWeatherData();
@@ -87,13 +98,8 @@ export default function HomeScreen() {
         })
     }
 
-
-    // limiting api calls
-    const handleTextDebounce = useCallback(debounce(handleSearch, 1200), [])
-
     const { current, location } = weather
     // console.log("avg temp: ", weather.forecast.forecastday[0].day?.avgtemp_f)
-
 
     return (
 
@@ -123,6 +129,7 @@ export default function HomeScreen() {
                                         showSearch ? (
                                             <TextInput
                                                 onChangeText={handleTextDebounce}
+                                            
                                                 placeholder="Search City"
                                                 placeholderTextColor={"lightgray"}
                                                 className="pl-6 h-10 flex-1 text-base text-black"
@@ -170,7 +177,7 @@ export default function HomeScreen() {
 
                             <View className="flex-col ">
                                 <Text className="text-black text-center text-5xl  mb-3">{Math.floor(current?.temp_f)}°</Text>
-                                <Text className="text-black text-center text-3xl font-bold">
+                               <Text className="text-black text-center text-3xl font-bold">
                                     {location?.name}
                                     <Text className="text-lg font-semibold text-gray-600">
                                         {" " + location?.region}
@@ -255,28 +262,27 @@ export default function HomeScreen() {
                     // const tomorrow = new Date(today.getTime() + (1000 * 60 * 60 * 24));
                     const time = new Date(item.time);
                     const currentTime = new Date()
-                    const hour = time.toLocaleTimeString([], {hour: 'numeric', hour12: true});
+                    const hour = time.toLocaleTimeString([], {hour: 'numeric', hour12: true}).toLowerCase();
                     const chanceOfRain = item?.chance_of_rain
 
                     if (currentTime < time) { 
                          return (
-                        <View
-                            key={index}
-                            className="flex justify-center items-center w-16 rounded-xl py-3 space-y-1 mr-3"
-                            style={{ backgroundColor: theme.bgWhite(0.30) }}
-                        >
-                            <Text className="text-gray-500 text-sm font-semibold">{hour}</Text>
-                            
-                            <Ionicons name="rainy-outline" size={20} color="gray" />
-                            <Text className="text-gray-500 text-sm font-semibold">{Math.floor(item?.chance_of_rain)}%</Text>
-                            <Image
-                                source={weatherImages[item?.condition?.text || 'other']}
-                                className="w-9 h-9"
-                            />
-                            <Text className="text-black text-sm font-semibold">
-                                {Math.floor(item?.temp_f)}°
-                            </Text>
-                        </View>
+                             <View
+                                 key={index}
+                                 className="flex justify-center items-center w-16 rounded-xl py-3 space-y-1 mr-3"
+                                 style={{ backgroundColor: theme.bgWhite(0.30) }}
+                             >
+                                 <Text className="text-gray-500 text-sm font-semibold">{hour}</Text>
+                                 <Ionicons name="rainy-outline" size={20} color="gray" />
+                                 <Text className="text-gray-500 text-sm font-semibold">{Math.floor(item?.chance_of_rain)}%</Text>
+                                 <Image
+                                     source={weatherImages[item?.condition?.text || 'other']}
+                                     className="w-9 h-9"
+                                 />
+                                 <Text className="text-black text-sm font-semibold">
+                                     {Math.floor(item?.temp_f)}°
+                                 </Text>
+                             </View>
                     );
 
                     }
@@ -316,7 +322,7 @@ export default function HomeScreen() {
                                                         style={{ width: 30, height: 30 }}
                                                     />
                                                     <Text> {item?.day?.condition?.text}</Text>
-                                                    <Text >{Math.floor(item?.day?.maxtemp_f - 6)}° L: {Math.floor(item?.day?.mintemp_f)}° </Text>
+                                                    <Text >H: {Math.floor(item?.day?.maxtemp_f - 6)}° L: {Math.floor(item?.day?.mintemp_f)}° </Text>
                                                 </View>
 
                                             )
