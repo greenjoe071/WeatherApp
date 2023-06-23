@@ -24,8 +24,6 @@ import { debounce } from 'lodash';
 
 import { fetchLocation, fetchWeatherForecast } from "../api/weather";
 
-
-
 //Greeting
 // const currentHour = new Date().getHours();
 // let greeting = '';
@@ -42,10 +40,8 @@ export default function HomeScreen() {
     const [locations, setLocations] = useState([])
     const [weather, setWeather] = useState({})
     const [loading, setLoading] = useState(true)
+    const [city, setCity] = useState()
     
-    
-   
-
     const getLocations = (loc) => {
         console.log("You entered: ", loc); 
         setLocations([]);
@@ -53,13 +49,15 @@ export default function HomeScreen() {
         
         fetchWeatherForecast({
             cityName: loc.name,
-            // cityName: loc.name && loc.region,// make this both loc.name and loc.region?
+            region: loc.region,
             days: "7"
         }).then(data => {
             setWeather(data)
             setLoading(false)
             storeData("city", loc.name)
+            storeData("region", loc.region)
             console.log("got forecast data: ", data)
+            setCity(loc.region)
         })
         toggleSearch(false)
     }
@@ -68,7 +66,6 @@ export default function HomeScreen() {
         if (value.length > 2) {
             fetchLocation({ cityName: value }).then(data => {
                 setLocations(data)
-                console.log("Value: ", value) // do i need to make value "city name and region"?  actually i probably need to make value equal to what is selected in the drop down?
             })
         }
     }
@@ -204,7 +201,7 @@ export default function HomeScreen() {
                                     className="w-20 h-20"
                                 />
                                 <View className="my-3 ml-3">
-                                    <Text className="font-medium text-base">H: {Math.floor(weather?.forecast?.forecastday[0]?.day?.maxtemp_f - 5)}°</Text>
+                                    <Text className="font-medium text-base">H: {Math.floor(weather?.forecast?.forecastday[0]?.day?.maxtemp_f)}°</Text>
                                     <Text className="font-medium text-base">L: {Math.floor(weather?.forecast?.forecastday[0]?.day?.mintemp_f)}°</Text>
                                 </View>
                             </View>
@@ -263,7 +260,7 @@ export default function HomeScreen() {
                     const time = new Date(item.time);
                     const currentTime = new Date()
                     const hour = time.toLocaleTimeString([], {hour: 'numeric', hour12: true}).toLowerCase();
-                    const chanceOfRain = item?.chance_of_rain
+                    // const chanceOfRain = item?.chance_of_rain
 
                     if (currentTime < time) { 
                          return (
