@@ -1,5 +1,7 @@
-import { StatusBar, } from "expo-status-bar";
 import React, { useCallback, useEffect, useState, } from "react";
+import { useGetWeather, fetchLocation, fetchWeatherForecast } from "../api/weather";
+import { StatusBar, } from "expo-status-bar";
+
 import {
     Text,
     View,
@@ -15,14 +17,11 @@ import {
 
 import { theme } from '../theme'
 import { Ionicons } from '@expo/vector-icons';
-import { AntDesign } from '@expo/vector-icons';
 import { Entypo, Feather } from '@expo/vector-icons';
 import { weatherImages } from "../constants";
 
 import { getData, storeData } from '../utils/asyncStorage';
 import { debounce } from 'lodash';
-
-import { fetchLocation, fetchWeatherForecast } from "../api/weather";
 
 //Greeting
 // const currentHour = new Date().getHours();
@@ -36,12 +35,55 @@ import { fetchLocation, fetchWeatherForecast } from "../api/weather";
 // }
 
 export default function HomeScreen() {
+ 
+   
+//    if (userLocationWeather) {    
+//    console.log("User Location Weather Object: ", userLocationWeather.forecast)
+//    }
+
     const [showSearch, toggleSearch] = useState(false);
     const [locations, setLocations] = useState([])
     const [weather, setWeather] = useState({})
     const [loading, setLoading] = useState(true)
-    const [city, setCity] = useState()
-    
+    const [city, setCity] = useState()    
+
+    const [error, lat, lon, userLocationWeather] = useGetWeather()
+
+   
+        // for fresh open
+        const initialWeatherData = async () => {
+          
+           if (typeof userLocationWeather.forecast === "undefined") {
+                console.log("problem!")
+                setLoading(true)                  
+            }  
+             else if (userLocationWeather) {
+                setWeather(userLocationWeather)
+                setLoading(false);
+                console.log("User Location Weather Object: ", userLocationWeather.forecast)
+            }   
+                     
+            //** use something like this to retrieve saved cities, later */
+        //     else {
+        //         let savedCity = await getData("city")
+        //         let cityName = ""
+        //     if (savedCity) cityName = savedCity
+                
+        //     fetchWeatherForecast({  
+        //         cityName,
+        //         days: "7"
+        //     }).then(data => {
+        //         setWeather(data)
+        //         setLoading(false)
+        //     })
+        // }
+        }
+
+        useEffect(() => {
+            initialWeatherData();
+        }, [])
+
+        // for the search feature
     const getLocations = (loc) => {
         console.log("You entered: ", loc); 
         setLocations([]);
@@ -61,7 +103,7 @@ export default function HomeScreen() {
         })
         toggleSearch(false)
     }
-
+    
     const handleSearch = value => {
         if (value.length > 2) {
             fetchLocation({ cityName: value }).then(data => {
@@ -70,33 +112,10 @@ export default function HomeScreen() {
         }
     }
 
-    // const handleSelect = (option) => {
-    //     setLocations([option])
-    // }
-
     // limiting api calls
     const handleTextDebounce = useCallback(debounce(handleSearch, 900), [])
 
-    useEffect(() => {
-        initialWeatherData();
-    }, [])
-
-    // Data for fresh open
-    const initialWeatherData = async () => {
-        let savedCity = await getData("city")
-        let cityName = "austin"
-        if (savedCity) cityName = savedCity
-        fetchWeatherForecast({
-            cityName,
-            days: "7"
-        }).then(data => {
-            setWeather(data)
-            setLoading(false)
-        })
-    }
-
     const { current, location } = weather
-    // console.log("avg temp: ", weather.forecast.forecastday[0].day?.avgtemp_f)
 
     return (
 
@@ -114,67 +133,69 @@ export default function HomeScreen() {
                     </View>
 
                 ) : (
-                    <SafeAreaView className="flex flex-1">
+        <SafeAreaView className="flex flex-1">
 
-                        {/* SECTION: Search */}
+{/* SECTION: Search */}
                         
-                            <View style={{ height: 55 }} className="my-10 mx-4 relative z-50">
-                                <View className="flex-row justify-end items-center rounded-full"
-                                    style={{ backgroundColor: showSearch ? theme.bgWhite(0.9) : "transparent" }}>
+                    <View style={{ height: 55 }} className="my-10 mx-4 relative z-50">
+                        <View className="flex-row justify-end items-center rounded-full"
+                            style={{ backgroundColor: showSearch ? theme.bgWhite(0.9) : "transparent" }}>
 
-                                    {
-                                        showSearch ? (
-                                            <TextInput
-                                                onChangeText={handleTextDebounce}
-                                            
-                                                placeholder="Search City"
-                                                placeholderTextColor={"lightgray"}
-                                                className="pl-6 h-10 flex-1 text-base text-black"
-                                            />
+                            {
+                                showSearch ? (
+                                    <TextInput
+                                        onChangeText={handleTextDebounce}
+                                    
+                                        placeholder="Search City"
+                                        placeholderTextColor={"lightgray"}
+                                        className="pl-6 h-10 flex-1 text-base text-black"
+                                    />
 
-                                        ) : null
-                                    }
+                                ) : null
+                            }
 
-                                    <TouchableOpacity
-                                        onPress={() => toggleSearch(!showSearch)}
-                                        style={{ backgroundColor: theme.bgBlack(0.2) }}
-                                        className="rounded-full p-3 m-1"
-                                    >
+                            <TouchableOpacity
+                                onPress={() => toggleSearch(!showSearch)}
+                                style={{ backgroundColor: theme.bgBlack(0.2) }}
+                                className="rounded-full p-3 m-1"
+                            >
 
-                                        <Entypo name="magnifying-glass" size={24} color="black" />
-                                    </TouchableOpacity>
+                                <Entypo name="magnifying-glass" size={24} color="black" />
+                            </TouchableOpacity>
+                        </View>
+                        
+                        {
+                            locations.length > 0 && showSearch ? (
+                                <View className="absolute w-full bg-gray-200 top-16 rounded-2xl">
+                            {
+                                locations.map((loc, index) => {
+                                    let showBorder = index + 1 != locations.length;
+                                    let borderStyle = showBorder ? "border-b-2 border-b-gray-300" : ""
+                                    return (
+                                        <TouchableOpacity
+                                            key={index}
+                                            onPress={() => getLocations(loc)}
+                                            className={"flex-row items-center border-0 p-3 px- mb-1 " + borderStyle}
+                                        >
+                                            <Feather name="map-pin" size={15} color="gray" />
+                                            <Text className="ml-2">{loc?.name}, {loc?.country}, {loc?.region}</Text>
+                                        </TouchableOpacity>
+                                    )
+                                })
+                            }
                                 </View>
-                                
-                                {
-                                    locations.length > 0 && showSearch ? (
-                                        <View className="absolute w-full bg-gray-200 top-16 rounded-2xl">
-                                            {
-                                                locations.map((loc, index) => {
-                                                    let showBorder = index + 1 != locations.length;
-                                                    let borderStyle = showBorder ? "border-b-2 border-b-gray-300" : ""
-                                                    return (
-                                                        <TouchableOpacity
-                                                            key={index}
-                                                            onPress={() => getLocations(loc)}
-                                                            className={"flex-row items-center border-0 p-3 px- mb-1 " + borderStyle}
-                                                        >
-                                                            <Feather name="map-pin" size={15} color="gray" />
-                                                            <Text className="ml-2">{loc?.name}, {loc?.country}, {loc?.region}</Text>
-                                                        </TouchableOpacity>
-                                                    )
-                                                })
-                                            }
-                                        </View>
-                                    ) : null
-                                }
-                            </View>
-                            <ScrollView contentContainerStyle={{ marginTop: 1 }} >
+                            ) : null
+                        }
+                    </View>
+              <ScrollView contentContainerStyle={{ marginTop: 1 }} >
 
   {/* SECTION: Forecast */}
 
                             <View className="flex-col ">
                                 <Text className="text-black text-center text-5xl  mb-3">{Math.floor(current?.temp_f)}°</Text>
-                               <Text className="text-black text-center text-3xl font-bold">
+                               <Text numberOfLines={1}
+                                ellipsizeMode="tail" 
+                                className="text-black mx-7 text-center text-3xl font-bold">
                                     {location?.name}
                                     <Text className="text-lg font-semibold text-gray-600">
                                         {" " + location?.region}
@@ -191,10 +212,7 @@ export default function HomeScreen() {
                             </View>
 
                             <View className="flex-row justify-center mt-1">
-                                {/* <Image source={{uri: 'https://'+current?.condition?.icon}}
-                    className="w-20 h-20"
-                /> */}
-
+                    
                                 <Image
                                     source={weatherImages[current?.condition?.text || 'other']}
                                     //  source={require('../assets/images/partlycloudy.png')}
@@ -255,8 +273,6 @@ export default function HomeScreen() {
         >
             {
                 weather?.forecast?.forecastday[0]?.hour?.map((item, index) => {
-                    // const today = new Date(); //trying this
-                    // const tomorrow = new Date(today.getTime() + (1000 * 60 * 60 * 24));
                     const time = new Date(item.time);
                     const currentTime = new Date()
                     const hour = time.toLocaleTimeString([], {hour: 'numeric', hour12: true}).toLowerCase();
@@ -271,7 +287,7 @@ export default function HomeScreen() {
                              >
                                  <Text className="text-gray-500 text-sm font-semibold">{hour}</Text>
                                  <Ionicons name="rainy-outline" size={20} color="gray" />
-                                 <Text className="text-gray-500 text-sm font-semibold">{Math.floor(item?.chance_of_rain)}%</Text>
+                                 <Text className="text-gray-500 text-sm font-semibold">{Math.round(item?.chance_of_rain)}%</Text>
                                  <Image
                                      source={weatherImages[item?.condition?.text || 'other']}
                                      className="w-9 h-9"
@@ -283,8 +299,6 @@ export default function HomeScreen() {
                     );
 
                     }
-
-                  
                 })
 }
                   
