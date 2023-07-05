@@ -3,44 +3,6 @@ import { API_KEY } from '@env'
 import React, { useState, useEffect } from 'react'
 import * as Location from 'expo-location'
 
-// getting user's current location: lat and lon
-export const useGetWeather = () => {
-    const [error, setError] = useState(null)
-    const [userLocationWeather, setuserLocationWeather] = useState({})
-    const [lat, setLat] = useState([])
-    const [lon, setLon] = useState([])
-
-    useEffect(() => {
-        (async() => {
-        let { status } = await Location.requestForegroundPermissionsAsync()
-        // console.log("status: ", status)
-        if (status !== 'granted') {
-            setError('permission to access location was denied')
-            return
-        }
-        let userCurrentLocation = await Location.getCurrentPositionAsync({})
-        setLat(userCurrentLocation.coords.latitude)
-        setLon(userCurrentLocation.coords.longitude)
-        await fetchUserLocationForecast()  
-
-        })()
-    }, [])
- 
-
-    // getting user's current location: lat and lon
-const  fetchUserLocationForecast = async () => {
-    try {
-        const res = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${lat} ${lon}&days=7&aqi=no`)
-        const data = await res.json()  
-        setuserLocationWeather(data)
-        
-    } catch(e) {
-        setError("could not fetch weather")
-    } 
-}  
-    
-    return [error, lat, lon, userLocationWeather,]
-}
 
 // users current location - not searched-for city
 const userCurrentLocationEndpoint = params => `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${params.lat} ${params.lon}&days=${params.days}&aqi=no`

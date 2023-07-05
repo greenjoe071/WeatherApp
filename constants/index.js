@@ -20,3 +20,23 @@ export const weatherImages = {
     'Fog': require('../assets/images/mist.png'),
     'other': require('../assets/images/moderaterain.png')
 }
+
+export const backgroundImages = {
+    'other': require('../assets/images/bgimg.jpg'),
+    'Fog': require('../assets/images/fog_bgimg.png'),
+    'Cloudy': require('../assets/images/cloudy_bgimg.png'),
+    'Overcast': require('../assets/images/cloudy_bgimg.png'),
+    'Moderate or heavy freezing rain': require('../assets/images/freeze_bgimg.png'),
+    'Partly cloudy': require('../assets/images/partlycloudy_bgimg.png'),
+    'Light rain': require('../assets/images/rainy_bgimg.png'),
+    'Light drizzle': require('../assets/images/rainy_bgimg.png'),
+    'Moderate rain at times': require('../assets/images/heavyrain_bgimg.png'),
+    'Heavy rain': require('../assets/images/heavyrain_bgimg.png'),
+    'Heavy rain at times': require('../assets/images/heavyrain_bgimg.png'),
+    'Moderate or heavy freezing rain': require('../assets/images/freeze_bgimg.png'),
+    'Moderate or heavy rain shower': require('../assets/images/heavyrain_bgimg.png'),
+    'Sunny': require('../assets/images/sunny_bgimg.png'),
+    'Thundery outbreaks possible': require('../assets/images/thunderstorm_bgimg.png'),
+    'Moderate or heavy rain with thunder': require('../assets/images/thunderstorm_bgimg.png'),
+    'Patchy light rain with thunder': require('../assets/images/heavyrain_bgimg.png'),
+}

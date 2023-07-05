@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "WeatherApp",
+    "name": "Weather App",
     "slug": "WeatherApp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon.jpg",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -18,6 +18,8 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.joesweatherappforportfolio",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -25,6 +27,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "66988250-e418-4ee6-a8c0-fe953fd2a992"
+      }
     }
   }
 }
